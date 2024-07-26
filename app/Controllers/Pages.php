@@ -55,7 +55,9 @@ class Pages extends BaseController
             'onhold' => $onhold,
             'complete' => $complete,
             'pending' => $pending,
-            'tiket' => $tiket
+            'tiket' => $tiket,
+            'tiket' => $this->tiketModel->paginate(10),
+            'pager' => $this->tiketModel->pager
 
         ];
 
